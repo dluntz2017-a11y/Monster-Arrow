@@ -1,0 +1,24 @@
+# Python virtual environments
+*.pyc
+__pycache__/
+.env
+
+# Node.js dependencies
+node_modules/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Environment files
+.env
+
+# Cache files
+*.log
+.cache/
+
+# IDE settings
+.vscode/
+.idea/
+*.sublime-*
