@@ -1,7 +1,7 @@
 # FastAPI Backend Dockerfile
 
 # Use the official FastAPI uvicorn image
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.11
 
 # Set the working directory
 WORKDIR /app
