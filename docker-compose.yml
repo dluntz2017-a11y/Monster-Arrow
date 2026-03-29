@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - '27017:27017'
+    networks:
+      - monster-arrow-network
+
+  fastapi:
+    build:
+      context: ./backend
+    container_name: fastapi
+    ports:
+      - '8000:8000'
+    networks:
+      - monster-arrow-network
+    depends_on:
+      - mongodb
+
+  react:
+    build:
+      context: ./frontend
+    container_name: react
+    ports:
+      - '3000:3000'
+    networks:
+      - monster-arrow-network
+
+networks:
+  monster-arrow-network:
+    driver: bridge
